@@ -5,6 +5,10 @@
       (keyup.enter)="ChangeTitle(newTitle.value)"
       (blur)="ChangeTitle(newTitle.value); newTitle.value='' ">
   <button (click)="ChangeTitle(newTitle.value)">Save</button> <br>
-  <button (click)="ReturnBack()">Return Back</button>
-  <a>Photo</a>
+  <button (click)="backClicked()">Return Back</button>
+  <button (click)="ReturnBack()">Restore</button>
+  <a>More Photo</a>
+</div>
+<div *ngIf="photo">
+    <img src={{photo.url}}>
 </div>

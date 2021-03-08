@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import{ActivatedRoute} from '@angular/router';
 import{albums} from '../albums';
+import{photos} from '../photos'
 import {Location} from '@angular/common';
 @Component({
   selector: 'app-album-details',
@@ -9,7 +10,7 @@ import {Location} from '@angular/common';
 })
 export class AlbumDetailsComponent implements OnInit {
   album;
-  
+  photo;
   constructor(private route:ActivatedRoute,private _location: Location) { }
   ChangeTitle(newTitle:string){
     if(newTitle){
@@ -24,8 +25,10 @@ export class AlbumDetailsComponent implements OnInit {
   }
   ngOnInit() {
     const routeParams=this.route.snapshot.paramMap;
+    const photoget=Number(routeParams.get('photoId'));
     const alIdfromRoute=Number(routeParams.get('albumId'));
     this.album=albums.find(album=>album.id===alIdfromRoute);
+    this.photo=photos.find(photo=>photo.id===photoget);
   }
 
 }
