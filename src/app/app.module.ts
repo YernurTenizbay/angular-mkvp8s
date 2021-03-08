@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 
 import { AboutComponent } from './about/about.component';
 import { AlbumsComponent } from './albums/albums.component';
+import { AlbumDetailsComponent } from './album-details/album-details.component';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { AlbumsComponent } from './albums/albums.component';
       { path: '', component: HomeComponent },
       {path:'',component:AboutComponent},
       {path:'albums/:albumId',component:AlbumsComponent},
+      {path:'albums/'}
     ])
   ],
   declarations: [
@@ -27,7 +29,7 @@ import { AlbumsComponent } from './albums/albums.component';
     ProductListComponent,
     HomeComponent,
     AboutComponent, 
-    AlbumsComponent
+    AlbumsComponent, AlbumDetailsComponent
   ],
   bootstrap: [
     AppComponent
