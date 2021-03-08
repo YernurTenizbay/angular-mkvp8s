@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import{ActivatedRoute} from '@angular/router';
 import{albums} from '../albums';
+
 import {httpClientInMemBackendServiceFactory} from 'angular-in-memory-web-api';
 @Component({
   selector: 'app-albums',
@@ -12,8 +13,13 @@ export class AlbumsComponent implements OnInit {
   constructor(private route: ActivatedRoute,) { }
   albums=albums;
   album_rev;
-  remove(){
-    this.album_rev.userId=2;
+  
+  create(){
+
+  }
+  remove(album_rev){
+    album_rev=album_rev.userId+1;
+    return album_rev;
   }
   ngOnInit() {
     const routeParams=this.route.snapshot.paramMap;
