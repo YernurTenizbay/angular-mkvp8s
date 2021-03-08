@@ -1,0 +1,10 @@
+<div *ngIf="album">
+  <h3>{{album.title}}</h3>
+
+  <input #newTitle
+      (keyup.enter)="ChangeTitle(newTitle.value)"
+      (blur)="ChangeTitle(newTitle.value); newTitle.value='' ">
+  <button (click)="ChangeTitle(newTitle.value)">Save</button> <br>
+  <button (click)="ReturnBack()">Return Back</button>
+  <a>Photo</a>
+</div>

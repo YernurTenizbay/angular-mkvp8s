@@ -1,20 +1,18 @@
-<h1> Home page</h1>
 
 <div *ngFor="let home of homes"> 
-  <div *ngFor="let album of albums">
-    <div *ngIf="home.id===album.userId">
+    <div *ngIf="home.id===1">
       <h3>
-        <a [routerLink]="['/albums',album.id ]">
+        <a [routerLink]="['/home',1]">
             {{home.name}}
         </a>
       </h3>
     </div>
-    <div *ngIf="home.id!=album.userId">
+    <div *ngIf="home.id===2">
       <h3>
-        <a >
+        <a [routerLink]="['/about']">
             {{home.name}}
         </a>
       </h3>
-    </div>    
-  </div>
+    </div>
 </div>
+

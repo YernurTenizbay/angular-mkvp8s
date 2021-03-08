@@ -12,15 +12,18 @@ import { AboutComponent } from './about/about.component';
 import { AlbumsComponent } from './albums/albums.component';
 import { AlbumDetailsComponent } from './album-details/album-details.component';
 
+
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      {path:'',component:AboutComponent},
-      {path:'albums/:albumId',component:AlbumsComponent},
-      {path:'albums/'}
+      {path:'home/:homeId',component:AlbumsComponent},
+      {path:'about',component:AboutComponent},
+      {path:'albums/:albumId',component:AlbumDetailsComponent}
+      
+      
     ])
   ],
   declarations: [
@@ -29,7 +32,8 @@ import { AlbumDetailsComponent } from './album-details/album-details.component';
     ProductListComponent,
     HomeComponent,
     AboutComponent, 
-    AlbumsComponent, AlbumDetailsComponent
+    AlbumsComponent, 
+    AlbumDetailsComponent, 
   ],
   bootstrap: [
     AppComponent
