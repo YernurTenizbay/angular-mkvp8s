@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import{ActivatedRoute} from '@angular/router';
 import{albums} from '../albums';
+import {Location} from '@angular/common';
 @Component({
   selector: 'app-album-details',
   templateUrl: './album-details.component.html',
@@ -9,11 +10,14 @@ import{albums} from '../albums';
 export class AlbumDetailsComponent implements OnInit {
   album;
   
-  constructor(private route:ActivatedRoute) { }
+  constructor(private route:ActivatedRoute,private _location: Location) { }
   ChangeTitle(newTitle:string){
     if(newTitle){
       this.album.title=newTitle;
     }
+  }
+  backClicked() {
+    this._location.back();
   }
   ReturnBack(){
     this.album.title=this.album.title2;
