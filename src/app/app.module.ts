@@ -19,7 +19,8 @@ import { AlbumDetailsComponent } from './album-details/album-details.component';
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      {path:'home/:homeId',component:AlbumsComponent},
+      {path:'albums',component:AlbumsComponent},
+      
       {path:'about',component:AboutComponent},
       {path:'albums/:albumId',component:AlbumDetailsComponent}
       
