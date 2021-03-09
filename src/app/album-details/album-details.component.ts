@@ -29,7 +29,7 @@ export class AlbumDetailsComponent implements OnInit {
     const photoget=Number(routeParams.get('photoId'));
     const alIdfromRoute=Number(routeParams.get('albumId'));
     this.album=albums.find(album=>album.id===alIdfromRoute);
-    this.photo=photos.find(photo=>photo.albumId===alIdfromRoute);
+    this.photo=photos.find(photo=>photo.id===alIdfromRoute);
   }
 
 }

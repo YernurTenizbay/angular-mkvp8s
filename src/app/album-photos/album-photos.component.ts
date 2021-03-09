@@ -21,7 +21,6 @@ export class AlbumPhotosComponent implements OnInit {
 
     
     const routeParams=this.route.snapshot.paramMap;
-    const photoget=Number(routeParams.get('photoId'));
     const alIdfromRoute=Number(routeParams.get('albumId'));
     this.photo=photos.find(photo=>photo.albumId===alIdfromRoute);
     this.album=albums.find(album=>album.id===alIdfromRoute);

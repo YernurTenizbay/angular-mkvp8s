@@ -5,7 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
-import { ProductListComponent } from './product-list/product-list.component';
+
 import { HomeComponent } from './home/home.component';
 
 import { AboutComponent } from './about/about.component';
@@ -33,7 +33,6 @@ import { AlbumPhotosComponent } from './album-photos/album-photos.component';
   declarations: [
     AppComponent,
     TopBarComponent,
-    ProductListComponent,
     HomeComponent,
     AboutComponent, 
     AlbumsComponent, 

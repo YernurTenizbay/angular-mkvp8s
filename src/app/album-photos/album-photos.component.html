@@ -1,5 +1,7 @@
+<button (click)="backClicked()">Return Back</button>
 <div *ngFor="let photo of photos">
   <div *ngIf="album.id===photo.albumId">
       <img src={{photo.url}}>
   </div>
 </div>
+<button (click)="backClicked()">Return Back</button>

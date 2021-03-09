@@ -7,7 +7,7 @@
   <button (click)="ChangeTitle(newTitle.value)">Save</button> <br>
   <button (click)="backClicked()">Return Back</button>
   <button (click)="ReturnBack()">Restore</button>
-  <a [routerLink]="['/albums/:album.id', photo.albumId]">
+  <a [routerLink]="['/albums',album.id, photo.id]">
         More photo
     </a>
 </div>

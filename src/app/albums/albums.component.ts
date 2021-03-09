@@ -13,9 +13,17 @@ export class AlbumsComponent implements OnInit {
   constructor(private route: ActivatedRoute,) { }
   albums=albums;
   album_rev;
-  
-  create(){
-
+  lastid=7;
+  create(newAlbum: string){
+    if(newAlbum!=''){
+    this.lastid+=1;
+    var element={
+    userId: 1,
+    id: this.lastid,
+    title: newAlbum,
+    title2: newAlbum};
+    this.albums.push(element);
+    }
   }
   remove(album_rev){
     album_rev=album_rev.userId+1;

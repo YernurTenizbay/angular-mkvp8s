@@ -1,4 +1,6 @@
- <button (click)="create()"> Create </button>
+  <input #newAlbum
+      (blur)="create(newAlbum.value); newAlbum.value='' ">
+<button (click)="create(newAlbum.value)"> Create </button>
 
 <div *ngFor="let album of albums"> 
   <div *ngIf="album.userId==1">
