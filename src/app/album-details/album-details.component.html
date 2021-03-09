@@ -7,8 +7,7 @@
   <button (click)="ChangeTitle(newTitle.value)">Save</button> <br>
   <button (click)="backClicked()">Return Back</button>
   <button (click)="ReturnBack()">Restore</button>
-  <a>More Photo</a>
-</div>
-<div *ngIf="photo">
-    <img src={{photo.url}}>
+  <a [routerLink]="['/albums/:album.id', photo.albumId]">
+        More photo
+    </a>
 </div>

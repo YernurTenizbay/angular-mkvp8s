@@ -1,35 +1,30 @@
 import { Component, OnInit } from '@angular/core';
-import{ActivatedRoute} from '@angular/router';
-import{albums} from '../albums';
 import{photos} from '../photos'
 import {Location} from '@angular/common';
+import{ActivatedRoute} from '@angular/router';
+import{albums} from '../albums';
 @Component({
-  selector: 'app-album-details',
-  templateUrl: './album-details.component.html',
-  styleUrls: ['./album-details.component.css']
+  selector: 'app-album-photos',
+  templateUrl: './album-photos.component.html',
+  styleUrls: ['./album-photos.component.css']
 })
-export class AlbumDetailsComponent implements OnInit {
-  album;
-  photo;
-  
+export class AlbumPhotosComponent implements OnInit {
+
   constructor(private route:ActivatedRoute,private _location: Location) { }
-  ChangeTitle(newTitle:string){
-    if(newTitle){
-      this.album.title=newTitle;
-    }
-  }
+  photo;
+  album;
+  photos=photos;
   backClicked() {
     this._location.back();
   }
-  ReturnBack(){
-    this.album.title=this.album.title2;
-  }
   ngOnInit() {
+
+    
     const routeParams=this.route.snapshot.paramMap;
     const photoget=Number(routeParams.get('photoId'));
     const alIdfromRoute=Number(routeParams.get('albumId'));
-    this.album=albums.find(album=>album.id===alIdfromRoute);
     this.photo=photos.find(photo=>photo.albumId===alIdfromRoute);
+    this.album=albums.find(album=>album.id===alIdfromRoute);
   }
 
 }

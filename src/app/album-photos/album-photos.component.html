@@ -1,0 +1,5 @@
+<div *ngFor="let photo of photos">
+  <div *ngIf="album.id===photo.albumId">
+      <img src={{photo.url}}>
+  </div>
+</div>
