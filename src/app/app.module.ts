@@ -13,10 +13,11 @@ import { AlbumsComponent } from './albums/albums.component';
 import { AlbumDetailsComponent } from './album-details/album-details.component';
 import { AlbumPhotosComponent } from './album-photos/album-photos.component';
 
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   imports: [
     BrowserModule,
+    HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },

@@ -3,13 +3,15 @@
 <button (click)="create(newAlbum.value)"> Create </button>
 
 <div *ngFor="let album of albums"> 
-  <div *ngIf="album.userId==1">
+  
+  <div *ngIf="album.userId<11">
   <h3>
-    <a [routerLink]="['/albums',album.id ]">
+    <a [routerLink]="['/albums',album.id]">
+        {{album.id}}
         {{album.title}}
     </a>
   </h3>
-    <button (click)="album.userId=remove(album.userId)"> Delete </button>
+    <button (click)="album.userId=remove()"> Delete </button>
   </div>
   
 </div>
