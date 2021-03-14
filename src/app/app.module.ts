@@ -24,8 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
       {path:'albums',component:AlbumsComponent},
       
       {path:'about',component:AboutComponent},
-      {path:'albums/:albumId',component:AlbumDetailsComponent},
-      {path:'albums/:albumId/:photoId',component:AlbumPhotosComponent}
+      {path:'albums/:id',component:AlbumDetailsComponent},
+      {path:'albums/:id/:id',component:AlbumPhotosComponent}
 
       
       

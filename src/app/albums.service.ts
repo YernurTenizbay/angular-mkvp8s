@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 
 import {Observable, of} from 'rxjs';
 import {Post} from './albums';
+
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {htmlAstToRender3Ast} from '@angular/compiler/src/render3/r3_template_transform';
 
@@ -37,4 +38,5 @@ export class PostsService {
   deletePost(id: number): Observable<any> {
     return this.client.delete<any>(`${this.BASE_URL}/albums/${id}`);
   }
+
 }

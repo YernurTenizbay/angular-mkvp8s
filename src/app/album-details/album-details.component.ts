@@ -36,7 +36,7 @@ export class AlbumDetailsComponent implements OnInit {
     // const alIdfromRoute=Number(routeParams.get('albumId'));
     // this.getPost(alIdfromRoute);
     this.route.paramMap.subscribe((params) => {
-      var id = +params.get('albumId');
+      var id = +params.get('id');
       this.getPost(id);
     });
   }
